@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed AbdAlmotalb | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F9FAFB;
+            margin: 0;
+            padding: 0;
+            color: #1F2937;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #3B82F6;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            font-weight: 400;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #3B82F6;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1E40AF;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3B82F6;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skills-container div {
+            background-color: #3B82F6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .skills-container div:hover {
+            background-color: #1E40AF;
+            transform: translateY(-2px);
+        }
+
+        /* Projects Section */
+        .project {
+            background-color: #F9FAFB;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            border-radius: 10px;
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .project-description h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #1F2937;
+        }
+
+        .project-description p {
+            margin: 10px 0 0;
+            color: #4B5563;
+        }
+
+        /* Contact Form Styles */
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F9FAFB;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact .form-group {
+            margin-bottom: 20px;
+        }
+
+        #contact label {
+            display: block;
+            font-weight: 500;
+            color: #1F2937;
+            margin-bottom: 8px;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            color: #1F2937;
+            background-color: white;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #contact input:focus,
+        #contact textarea:focus {
+            border-color: #3B82F6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        #contact textarea {
+            resize: vertical;
+        }
+
+        #contact button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #contact button:hover {
+            background-color: #1E40AF;
+            transform: translateY(-2px);
+        }
+
+        #contact button:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1F2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #3B82F6;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #1E40AF;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ahmed AbdAlmotalb</h1>
+        <p>Data Specialist | Power BI | SQL | Tableau | Python</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Ahmed AbdAlmotalb, a detail-oriented data analyst with experience in data modelling, data visualization, and process optimization. I use tools like Power BI, Python, and SQL to transform raw data into actionable insights. I enjoy solving complex problems, improving workflows, and delivering data-driven solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div>Power BI</div>
+            <div>SQL</div>
+            <div>Python</div>
+            <div>Tableau</div>
+            <div>Data Visualization</div>
+            <div>Data Cleaning</div>
+            <div>Problem-Solving</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <!-- Sales Dashboard -->
+        <div class="project">
+            <img src="sales_dashboard.jpg" alt="Sales Dashboard">
+            <div class="project-description">
+                <h3>Sales Dashboard</h3>
+                <p>Analyzed sales data using Power BI, highlighting revenue trends and regional performance.</p>
+            </div>
+        </div>
+
+        <!-- HR Analytics Dashboard -->
+        <div class="project">
+            <img src="hr_dashboard.jpg" alt="HR Analytics Dashboard">
+            <div class="project-description">
+                <h3>HR Analytics Dashboard</h3>
+                <p>Built an HR dashboard in Tableau to visualize employee retention and satisfaction metrics.</p>
+            </div>
+        </div>
+
+        <!-- AdventureWorks Sales Analysis -->
+        <div class="project">
+            <img src="adventureworks.jpg" alt="AdventureWorks Sales Analysis">
+            <div class="project-description">
+                <h3>AdventureWorks Sales Analysis</h3>
+                <p>Created a comprehensive sales dashboard in Power BI, tracking order counts, tax amounts, freight costs, and revenue trends. Revealed that clothing is the most ordered category, while bikes generate the highest revenue.</p>
+            </div>
+        </div>
+
+        <!-- Airport Flight Data Analysis -->
+        <div class="project">
+            <img src="airport_flight.jpg" alt="Airport Flight Data Analysis">
+            <div class="project-description">
+                <h3>Airport Flight Data Analysis</h3>
+                <p>Developed a Power BI model using airport and flight data, establishing both active and inactive relationships between tables for accurate analysis of arrival and destination patterns.</p>
+            </div>
+        </div>
+
+        <!-- Translating Sign Language into Spoken Language -->
+        <div class="project">
+            <img src="sign_language.jpg" alt="Sign Language Translation">
+            <div class="project-description">
+                <h3>Translating Sign Language into Spoken Language</h3>
+                <p>Utilized flex sensors, MPU 6050 module, multiple MCUs, ESP 8266, EEPROM, and display to convert sign language into speech.</p>
+            </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="project">
+            <img src="calculator.jpg" alt="Calculator">
+            <div class="project-description">
+                <h3>Calculator</h3>
+                <p>Developed a calculator using a keypad, LCD, and MCU for mathematical operations.</p>
+            </div>
+        </div>
+
+        <!-- Numbering System Converter -->
+        <div class="project">
+            <img src="number_converter.jpg" alt="Numbering System Converter">
+            <div class="project-description">
+                <h3>Numbering System Converter</h3>
+                <p>Built a system converter using keypad, LCD, and MCU for number system conversions.</p>
+            </div>
+        </div>
+
+        <!-- Fire System -->
+        <div class="project">
+            <img src="fire_system.jpg" alt="Fire System">
+            <div class="project-description">
+                <h3>Fire System</h3>
+                <p>Created a fire detection system using temperature and smoke sensors, motor-controlled water valves, EEPROM for password storage, and MCU logic.</p>
+            </div>
+        </div>
+
+        <!-- Power-BI-E_commerce Dashboard -->
+        <div class="project">
+            <img src="powerbi_ecommerce.jpg" alt="Power-BI-E_commerce Dashboard">
+            <div class="project-description">
+                <h3>Power-BI-E_commerce Dashboard</h3>
+                <p>Developed a comprehensive Power BI dashboard for an eCommerce business, summarizing key metrics related to sales, customer information, product categories, and geographic customer lifetime value (LTV).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xanqppal" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ahmed AbdAlmotalb. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.linkedin.com/in/ahmed-abdalmotalb-7163902a2" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/AbdAlmotalb" target="_blank">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
