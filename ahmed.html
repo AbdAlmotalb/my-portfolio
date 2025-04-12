@@ -161,6 +161,21 @@
             margin: 10px 0 0;
             color: #4B5563;
         }
+		.show-more-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #3B82F6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .show-more-btn:hover {
+            background-color: #1D4ED8;
+        }
 
         /* Contact Form Styles */
         #contact form {
@@ -291,6 +306,7 @@
         <div class="skills-container">
             <div>Power BI</div>
             <div>SQL</div>
+			<div>Excel</div>
             <div>Python</div>
             <div>Tableau</div>
             <div>Data Visualization</div>
@@ -302,86 +318,138 @@
     <section id="projects">
         <h2>Projects</h2>
         
-        <!-- Sales Dashboard -->
+        <!-- Power-BI-E_commerce Dashboard -->
         <div class="project">
-            <img src="sales_dashboard.jpg" alt="Sales Dashboard">
+            <img src="assets/powerbi_ecommerce.jpg" alt="Power-BI-E_commerce Dashboard">
             <div class="project-description">
-                <h3>Sales Dashboard</h3>
-                <p>Analyzed sales data using Power BI, highlighting revenue trends and regional performance.</p>
-            </div>
+                <h3>E_commerce Dashboard</h3>
+                <p>Developed a comprehensive Power BI dashboard for an eCommerce business, summarizing key metrics related to sales, customer information, product categories, and geographic customer lifetime value (LTV).</p>
+				<a href="projects/powerbi_ecommerce.html" class="show-more-btn">Show More →</a>
+			</div>
         </div>
-
-        <!-- HR Analytics Dashboard -->
+		
+		<!-- Olympic Games Analysis Dashboard -->
         <div class="project">
-            <img src="hr_dashboard.jpg" alt="HR Analytics Dashboard">
+            <img src="assets/Olympic_Games_Analysis.jpg" alt="Olympic Games Analysis Dashboard">
             <div class="project-description">
-                <h3>HR Analytics Dashboard</h3>
-                <p>Built an HR dashboard in Tableau to visualize employee retention and satisfaction metrics.</p>
-            </div>
+                <h3>Olympic Games Analysis Dashboard</h3>
+                <p>Analyzed historical Olympic Games data to uncover trends in athlete performance and medal distribution.</p>
+				<a href="projects/Olympic_Games_Analysis.html" class="show-more-btn">Show More →</a>
+			</div>
         </div>
 
         <!-- AdventureWorks Sales Analysis -->
         <div class="project">
-            <img src="adventureworks.jpg" alt="AdventureWorks Sales Analysis">
+            <img src="assets/adventureworks.jpg" alt="AdventureWorks Sales Analysis">
             <div class="project-description">
                 <h3>AdventureWorks Sales Analysis</h3>
                 <p>Created a comprehensive sales dashboard in Power BI, tracking order counts, tax amounts, freight costs, and revenue trends. Revealed that clothing is the most ordered category, while bikes generate the highest revenue.</p>
-            </div>
+				<a href="projects/adventureworks.html" class="show-more-btn">Show More →</a>
+			</div>
         </div>
 
         <!-- Airport Flight Data Analysis -->
         <div class="project">
-            <img src="airport_flight.jpg" alt="Airport Flight Data Analysis">
+            <img src="assets/airport_flight.jpg" alt="Airport Flight Data Analysis">
             <div class="project-description">
                 <h3>Airport Flight Data Analysis</h3>
                 <p>Developed a Power BI model using airport and flight data, establishing both active and inactive relationships between tables for accurate analysis of arrival and destination patterns.</p>
+				<a href="projects/airport_flight.html" class="show-more-btn">Show More →</a>
+			</div>
+        </div>
+		
+		<!-- Titanic Dashboard -->
+        <div class="project">
+            <img src="assets/Titanic_dashboard.jpg" alt="Titanic Dashboard">
+            <div class="project-description">
+                <h3>Titanic Dashboard</h3>
+                <p>This project analyzes the famous Titanic dataset using Excel to uncover survival patterns and passenger demographics. The analysis leverages pivot tables, charts, and conditional formatting to derive meaningful insights from the data.</p>
+				<a href="projects/Titanic_dashboard.html" class="show-more-btn">Show More →</a>
+			</div>
+        </div>
+		
+		<!-- Bike Sales Dashboard -->
+        <div class="project">
+            <img src="assets/Bike_sales_dashboard.jpg" alt="Bike Sales Dashboard">
+            <div class="project-description">
+                <h3>Bike Sales Dashboard</h3>
+                <p>Analyzed Bike sales data using Excel, highlighting revenue trends and regional performance.</p>
+				<a href="projects/Bike_sales_dashboard.html" class="show-more-btn">Show More →</a>
             </div>
+        </div>
+		
+		<!-- Amazon Data Scraping -->
+        <div class="project">
+            <img src="assets/Amazon_Data_Scraping.jpg" alt="Amazon Data Scraping">
+            <div class="project-description">
+                <h3>Amazon Data Scraping</h3>
+                <p>Built a web scraper using BeautifulSoup and Selenium to extract product data from Amazon for competitive analysis and pricing strategies.</p>
+				<a href="projects/Amazon_Data_Scraping.html" class="show-more-btn">Show More →</a>
+			</div>
+        </div>
+		
+		<!-- COVID Data Exploration -->
+        <div class="project">
+            <img src="assets/COVID_Data_Exploration.jpg" alt="COVID Data Exploration">
+            <div class="project-description">
+                <h3>COVID Data Exploration</h3>
+                <p>This project focuses on extracting key insights from global COVID-19 data using SQL. The goal was to uncover trends, patterns, and high-risk zones by querying infection and vaccination data at both country and continent levels.</p>
+				<a href="projects/COVID_Data_Exploration.html" class="show-more-btn">Show More →</a>
+			</div>
+        </div>
+
+
+        <!-- HR Analytics Dashboard -->
+        <div class="project">
+            <img src="assets/hr_dashboard.jpg" alt="HR Analytics Dashboard">
+            <div class="project-description">
+                <h3>HR Analytics Dashboard</h3>
+                <p>Built an HR dashboard in Tableau to visualize employee retention and satisfaction metrics.</p>
+				<a href="projects/hr_dashboard.html" class="show-more-btn">Show More →</a>
+			</div>
         </div>
 
         <!-- Translating Sign Language into Spoken Language -->
         <div class="project">
-            <img src="sign_language.jpg" alt="Sign Language Translation">
+            <img src="assets/sign_language.jpg" alt="Sign Language Translation">
             <div class="project-description">
                 <h3>Translating Sign Language into Spoken Language</h3>
                 <p>Utilized flex sensors, MPU 6050 module, multiple MCUs, ESP 8266, EEPROM, and display to convert sign language into speech.</p>
+				<a href="projects/sign_language.html" class="show-more-btn">Show More →</a>
             </div>
         </div>
 
         <!-- Calculator -->
         <div class="project">
-            <img src="calculator.jpg" alt="Calculator">
+            <img src="assets/calculator.jpg" alt="Calculator">
             <div class="project-description">
                 <h3>Calculator</h3>
                 <p>Developed a calculator using a keypad, LCD, and MCU for mathematical operations.</p>
+				<a href="projects/calculator.html" class="show-more-btn">Show More →</a>
             </div>
         </div>
 
         <!-- Numbering System Converter -->
         <div class="project">
-            <img src="number_converter.jpg" alt="Numbering System Converter">
+            <img src="assets/number_converter.jpg" alt="Numbering System Converter">
             <div class="project-description">
                 <h3>Numbering System Converter</h3>
                 <p>Built a system converter using keypad, LCD, and MCU for number system conversions.</p>
+				<a href="projects/number_converter.html" class="show-more-btn">Show More →</a>
             </div>
         </div>
 
         <!-- Fire System -->
         <div class="project">
-            <img src="fire_system.jpg" alt="Fire System">
+            <img src="assets/fire_system.jpg" alt="Fire System">
             <div class="project-description">
                 <h3>Fire System</h3>
                 <p>Created a fire detection system using temperature and smoke sensors, motor-controlled water valves, EEPROM for password storage, and MCU logic.</p>
-            </div>
+				<a href="projects/fire_system.html" class="show-more-btn">Show More →</a>
+			</div>
         </div>
 
-        <!-- Power-BI-E_commerce Dashboard -->
-        <div class="project">
-            <img src="powerbi_ecommerce.jpg" alt="Power-BI-E_commerce Dashboard">
-            <div class="project-description">
-                <h3>Power-BI-E_commerce Dashboard</h3>
-                <p>Developed a comprehensive Power BI dashboard for an eCommerce business, summarizing key metrics related to sales, customer information, product categories, and geographic customer lifetime value (LTV).</p>
-            </div>
-        </div>
+        
     </section>
 
     <section id="contact">
