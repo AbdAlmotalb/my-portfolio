@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard | Ahmed's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #3B82F6;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            color: #1E40AF;
+            background-color: #EFF6FF;
+        }
+        
+        /* Project-specific styles */
+        .project-hero {
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .project-details {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .project-details h3 {
+            color: #1F2937;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .detail-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-item h4 {
+            color: #3B82F6;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background-color: #EFF6FF;
+            color: #1D4ED8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .code-link {
+            display: inline-block;
+            background-color: #3B82F6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .code-link:hover {
+            background-color: #1D4ED8;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        article h2 {
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        article h3 {
+            color: #1F2937;
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+        }
+        
+        article p, article li {
+            line-height: 1.6;
+            color: #4B5563;
+        }
+        
+        article ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        article li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        article li p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-hero {
+                padding: 4rem 1.5rem;
+            }
+            
+            .project-container {
+                padding: 0 1.5rem;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1F2937;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #93C5FD;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #3B82F6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-hero, article, .project-details {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="project-hero">
+        <h1>E-commerce Dashboard</h1>
+        <p>A comprehensive Power BI dashboard analyzing customer behavior, shipping costs, and profitability for eCommerce</p>
+    </header>
+    
+    <nav class="project-navigation">
+        <a href="previous-project.html" class="nav-button">← Previous Project</a>
+        <a href="../ahmed.html" class="nav-button">Back to Portfolio</a>
+        <a href="next-project.html" class="nav-button">Next Project →</a>
+    </nav>
+    
+    <div class="project-container">
+        <div class="project-content">
+            <article>
+                <h2>Project Overview</h2>
+                <p>This Power BI dashboard provides actionable insights for an eCommerce business by analyzing key performance indicators (KPIs) including customer metrics, profitability, shipping costs, and the relationship between product quantities and business outcomes.</p>
+                
+                <p>The dashboard enables stakeholders to:</p>
+                <ul>
+                    <li>Understand customer purchasing patterns and segmentation</li>
+                    <li>Optimize shipping strategies based on product quantities</li>
+                    <li>Analyze profit margins at both item and order levels</li>
+                    <li>Simulate different shipping cost scenarios to maximize profitability</li>
+                </ul>
+                
+                <h3>Key Features & Analysis</h3>
+                <ul>
+                    <li>
+                        <p><strong>Customer Analytics</strong></p>
+                        <p>Tracking unique customer counts, growth over time, and segmentation by geographic region and purchase behavior to identify valuable customer groups.</p>
+                    </li>
+                    <li>
+                        <p><strong>Profitability Metrics</strong></p>
+                        <p>Calculating total profit and profit margin percentage by subtracting landed cost and shipping from sales price, with visualizations showing trends over time.</p>
+                    </li>
+                    <li>
+                        <p><strong>Shipping Cost Optimization</strong></p>
+                        <p>Analyzing how shipping costs vary with product count, implementing bulk shipping discounts, and evaluating their impact on overall profitability.</p>
+                    </li>
+                    <li>
+                        <p><strong>What-If Scenarios</strong></p>
+                        <p>Interactive simulations to test how different shipping cost structures would affect profit margins, particularly for high-volume orders.</p>
+                    </li>
+                    <li>
+                        <p><strong>Seasonal Trend Analysis</strong></p>
+                        <p>Using time intelligence functions to identify seasonal patterns in sales and customer acquisition for better inventory and marketing planning.</p>
+                    </li>
+                </ul>
+                
+                <h3>Technical Implementation</h3>
+                <p>The dashboard was built in Power BI with:</p>
+                <ul>
+                    <li>Data modeling to connect customer, product, and sales tables</li>
+                    <li>DAX measures for calculating KPIs like profit margin and shipping cost factors</li>
+                    <li>Interactive filters and slicers for dynamic analysis</li>
+                    <li>Custom visualizations to highlight key relationships</li>
+                    <li>What-if parameters for scenario testing</li>
+                </ul>
+                
+				
+				
+				
+				
+				<div class="project-gallery" id="gallery"></div>
+
+<script>
+  const gallery = document.getElementById("gallery");
+  const imageNames = [
+    "image1.jpg",
+    "image2.png",
+    "image3.jpeg"
+    // Add your real image filenames here
+  ];
+
+  imageNames.forEach(name => {
+    const img = document.createElement("img");
+    img.src = `assets/E_commerce/${name}`;
+    img.alt = name;
+    img.loading = "lazy";
+    img.className = "gallery-item";
+    gallery.appendChild(img);
+  });
+</script>
+
+<style>
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+</style>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+            </article>
+            
+            <aside class="project-details">
+                <h3>Project Details</h3>
+                
+                <div class="detail-item">
+                    <h4>Technologies Used</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Project Timeline</h4>
+                    <p>2 weeks (2025)</p>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Project Type</h4>
+                    <p>Business Intelligence Dashboard</p>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Key Achievements</h4>
+                    <ul>
+                        <li>Identified shipping cost savings opportunities</li>
+                        <li>Highlighted most profitable customer segments</li>
+                        <li>Created reusable what-if analysis framework</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Source Code</h4>
+                    <a href="https://github.com/AbdAlmotalb/Power-BI-E_commerce" target="_blank" class="code-link">View on GitHub</a>
+                </div>
+                
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Ahmed AbdAlmotalb. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.linkedin.com/in/ahmed-abdalmotalb-7163902a2" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/AbdAlmotalb" target="_blank">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
