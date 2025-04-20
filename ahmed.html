@@ -1,286 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Ahmed AbdAlmotalb's Portfolio - Data Analyst | Power BI | SQL | Tableau | Python">
-<meta name="keywords" content="data analyst, portfolio, Power BI, SQL, Tableau, Python">
-<meta name="author" content="Ahmed AbdAlmotalb">
+    <meta name="description" content="Ahmed AbdAlmotalb's Portfolio - Data Analyst | Power BI | SQL | Tableau | Python">
+    <meta name="keywords" content="data analyst, portfolio, Power BI, SQL, Tableau, Python">
+    <meta name="author" content="Ahmed AbdAlmotalb">
     <title>Ahmed AbdAlmotalb | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F9FAFB;
-            margin: 0;
-            padding: 0;
-            color: #1F2937;
-            line-height: 1.6;
-        }
-		
-		/* Download Button Styles */
-.download-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #3B82F6;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    <link rel="stylesheet" href="stylesheet.css">
 
-.download-button:hover {
-    background-color: #1E40AF;
-    transform: translateY(-2px);
-}
 
-.download-button:active {
-    transform: translateY(0);
-}
-
-        /* Header */
-        header {
-            background-color: #3B82D6;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
-            font-weight: 400;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 20px;
-            color: #3B82F6;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #1E40AF;
-        }
-
-        /* Sections */
-        section {
-            background-color: white;
-            margin: 40px auto;
-            padding: 30px;
-            max-width: 1000px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #3B82F6;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .skills-container div {
-            background-color: #3B82F6;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            transition: transform 0.2s ease, background-color 0.3s ease;
-        }
-
-        .skills-container div:hover {
-            background-color: #1E40AF;
-            transform: translateY(-2px);
-        }
-
-        /* Projects Section */
-        .project {
-            background-color: #F9FAFB;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .project img {
-            border-radius: 10px;
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .project-description h3 {
-            margin: 0;
-            font-size: 1.25rem;
-            color: #1F2937;
-        }
-
-        .project-description p {
-            margin: 10px 0 0;
-            color: #4B5563;
-        }
-		.show-more-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 16px;
-            background-color: #3B82F6;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .show-more-btn:hover {
-            background-color: #1D4ED8;
-        }
-
-        /* Contact Form Styles */
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #F9FAFB;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #contact .form-group {
-            margin-bottom: 20px;
-        }
-
-        #contact label {
-            display: block;
-            font-weight: 500;
-            color: #1F2937;
-            margin-bottom: 8px;
-        }
-
-        #contact input,
-        #contact textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            color: #1F2937;
-            background-color: white;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #contact input:focus,
-        #contact textarea:focus {
-            border-color: #3B82F6;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        #contact textarea {
-            resize: vertical;
-        }
-
-        #contact button {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #3B82F6;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        #contact button:hover {
-            background-color: #1E40AF;
-            transform: translateY(-2px);
-        }
-
-        #contact button:active {
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1F2937;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #3B82F6;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #1E40AF;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        section {
-            animation: fadeIn 0.8s ease-out;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -292,23 +23,25 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#other-projects">Other Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Ahmed AbdAlmotalb, a detail-oriented data analyst with experience in data modelling, data visualization, and process optimization. I use tools like Power BI, Python, and SQL to transform raw data into actionable insights. I enjoy solving complex problems, improving workflows, and delivering data-driven solutions.</p>
-    <a href="Ahmed_AbdAlmotalb_Resume.pdf" download class="download-button">Download My CV</a>
-</section>
+        <h2>About Me</h2>
+        <p>I'm Ahmed AbdAlmotalb, a detail-oriented data analyst with experience in data modelling, data visualization, and process optimization. I use tools like Power BI, Python, and SQL to transform raw data into actionable insights. I enjoy solving complex problems, improving workflows, and delivering data-driven solutions.</p>
+        <a href="Ahmed_AbdAlmotalb_Resume.pdf" download class="download-button">Download My CV</a>
+    </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
             <div>Power BI</div>
             <div>SQL</div>
-			<div>Excel</div>
+            <div>Excel</div>
             <div>Python</div>
             <div>Tableau</div>
+            <div>C</div>
             <div>Data Visualization</div>
             <div>Data Cleaning</div>
             <div>Problem-Solving</div>
@@ -324,18 +57,28 @@
             <div class="project-description">
                 <h3>E_commerce Dashboard</h3>
                 <p>Developed a comprehensive Power BI dashboard for an eCommerce business, summarizing key metrics related to sales, customer information, product categories, and geographic customer lifetime value (LTV).</p>
-				<a href="projects/powerbi_ecommerce.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/powerbi_ecommerce.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
-		
-		<!-- Olympic Games Analysis Dashboard -->
+        
+        <!-- Olympic Games Analysis Dashboard -->
         <div class="project">
             <img src="assets/Olympic_Games_Analysis.jpg" alt="Olympic Games Analysis Dashboard">
             <div class="project-description">
                 <h3>Olympic Games Analysis Dashboard</h3>
                 <p>Analyzed historical Olympic Games data to uncover trends in athlete performance and medal distribution.</p>
-				<a href="projects/Olympic_Games_Analysis.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/Olympic_Games_Analysis.html" class="show-more-btn">Show More</a>
+            </div>
+        </div>
+        
+        <!-- Healthcare Analytics Dashboard-->
+        <div class="project">
+            <img src="assets/Healthcare_Analytics.jpg" alt="Healthcare Analytics Dashboard">
+            <div class="project-description">
+                <h3>Healthcare Analytics Dashboard</h3>
+                <p>This Power BI dashboard provides insights into patient demographics, insurance coverage, and medical conditions across healthcare organizations.</p>
+                <a href="projects/Healthcare_Analytics.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
 
         <!-- AdventureWorks Sales Analysis -->
@@ -344,60 +87,59 @@
             <div class="project-description">
                 <h3>AdventureWorks Sales Analysis</h3>
                 <p>Created a comprehensive sales dashboard in Power BI, tracking order counts, tax amounts, freight costs, and revenue trends. Revealed that clothing is the most ordered category, while bikes generate the highest revenue.</p>
-				<a href="projects/adventureworks.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/adventureworks.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
 
         <!-- Airport Flight Data Analysis -->
         <div class="project">
             <img src="assets/airport_flight.jpg" alt="Airport Flight Data Analysis">
             <div class="project-description">
-                <h3>Airport Flight Data Analysis</h3>
+                <h3>Flight Delays Analysis Dashboard</h3>
                 <p>Developed a Power BI model using airport and flight data, establishing both active and inactive relationships between tables for accurate analysis of arrival and destination patterns.</p>
-				<a href="projects/airport_flight.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/airport_flight.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
-		
-		<!-- Titanic Dashboard -->
+        
+        <!-- Titanic Dashboard -->
         <div class="project">
             <img src="assets/Titanic_dashboard.jpg" alt="Titanic Dashboard">
             <div class="project-description">
                 <h3>Titanic Dashboard</h3>
                 <p>This project analyzes the famous Titanic dataset using Excel to uncover survival patterns and passenger demographics. The analysis leverages pivot tables, charts, and conditional formatting to derive meaningful insights from the data.</p>
-				<a href="projects/Titanic_dashboard.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/Titanic_dashboard.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
-		
-		<!-- Bike Sales Dashboard -->
+        
+        <!-- Bike Sales Dashboard -->
         <div class="project">
             <img src="assets/Bike_sales_dashboard.jpg" alt="Bike Sales Dashboard">
             <div class="project-description">
                 <h3>Bike Sales Dashboard</h3>
                 <p>Analyzed Bike sales data using Excel, highlighting revenue trends and regional performance.</p>
-				<a href="projects/Bike_sales_dashboard.html" class="show-more-btn">Show More →</a>
+                <a href="projects/Bike_sales_dashboard.html" class="show-more-btn">Show More</a>
             </div>
         </div>
-		
-		<!-- Amazon Data Scraping -->
+        
+        <!-- Amazon Data Scraping -->
         <div class="project">
             <img src="assets/Amazon_Data_Scraping.jpg" alt="Amazon Data Scraping">
             <div class="project-description">
                 <h3>Amazon Data Scraping</h3>
-                <p>Built a web scraper using BeautifulSoup and Selenium to extract product data from Amazon for competitive analysis and pricing strategies.</p>
-				<a href="projects/Amazon_Data_Scraping.html" class="show-more-btn">Show More →</a>
-			</div>
+                <p>Built a web scraper using BeautifulSoup to extract product data from Amazon for pricing strategies.</p>
+                <a href="projects/Amazon_Data_Scraping.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
-		
-		<!-- COVID Data Exploration -->
+        
+        <!-- COVID Data Exploration -->
         <div class="project">
             <img src="assets/COVID_Data_Exploration.jpg" alt="COVID Data Exploration">
             <div class="project-description">
                 <h3>COVID Data Exploration</h3>
                 <p>This project focuses on extracting key insights from global COVID-19 data using SQL. The goal was to uncover trends, patterns, and high-risk zones by querying infection and vaccination data at both country and continent levels.</p>
-				<a href="projects/COVID_Data_Exploration.html" class="show-more-btn">Show More →</a>
-			</div>
+                <a href="projects/COVID_Data_Exploration.html" class="show-more-btn">Show More</a>
+            </div>
         </div>
-
 
         <!-- HR Analytics Dashboard -->
         <div class="project">
@@ -405,51 +147,67 @@
             <div class="project-description">
                 <h3>HR Analytics Dashboard</h3>
                 <p>Built an HR dashboard in Tableau to visualize employee retention and satisfaction metrics.</p>
-				<a href="projects/hr_dashboard.html" class="show-more-btn">Show More →</a>
-			</div>
-        </div>
-
-        <!-- Translating Sign Language into Spoken Language -->
-        <div class="project">
-            <img src="assets/sign_language.jpg" alt="Sign Language Translation">
-            <div class="project-description">
-                <h3>Translating Sign Language into Spoken Language</h3>
-                <p>Utilized flex sensors, MPU 6050 module, multiple MCUs, ESP 8266, EEPROM, and display to convert sign language into speech.</p>
-				<a href="projects/sign_language.html" class="show-more-btn">Show More →</a>
+                <a href="projects/hr_dashboard.html" class="show-more-btn">Show More</a>
             </div>
         </div>
+    </section>
 
-        <!-- Calculator -->
-        <div class="project">
-            <img src="assets/calculator.jpg" alt="Calculator">
-            <div class="project-description">
-                <h3>Calculator</h3>
-                <p>Developed a calculator using a keypad, LCD, and MCU for mathematical operations.</p>
-				<a href="projects/calculator.html" class="show-more-btn">Show More →</a>
+    <section id="other-projects">
+        <h2>Other Projects</h2>
+        <div class="swiper other-projects-slider">
+            <div class="swiper-wrapper">
+                <!-- Translating Sign Language into Spoken Language -->
+                <div class="swiper-slide">
+                    <div class="project">
+                        <img src="assets/sign_language.jpg" alt="Sign Language Translation">
+                        <div class="project-description">
+                            <h3>Translating Sign Language into Spoken Language</h3>
+                            <p>Utilized flex sensors, MPU 6050 module, multiple MCUs, ESP 8266, EEPROM, and display to convert sign language into speech.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Calculator -->
+                <div class="swiper-slide">
+                    <div class="project">
+                        <img src="assets/calculator.jpg" alt="Calculator">
+                        <div class="project-description">
+                            <h3>Calculator</h3>
+                            <p>Developed a calculator using a keypad, LCD, and MCU for mathematical operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Numbering System Converter -->
+                <div class="swiper-slide">
+                    <div class="project">
+                        <img src="assets/number_converter.jpg" alt="Numbering System Converter">
+                        <div class="project-description">
+                            <h3>Numbering System Converter</h3>
+                            <p>Built a system converter using keypad, LCD, and MCU for number system conversions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fire System -->
+                <div class="swiper-slide">
+                    <div class="project">
+                        <img src="assets/fire_system.jpg" alt="Fire System">
+                        <div class="project-description">
+                            <h3>Fire System</h3>
+                            <p>Created a fire detection system using temperature and smoke sensors, motor-controlled water valves, EEPROM for password storage, and MCU logic.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-
-        <!-- Numbering System Converter -->
-        <div class="project">
-            <img src="assets/number_converter.jpg" alt="Numbering System Converter">
-            <div class="project-description">
-                <h3>Numbering System Converter</h3>
-                <p>Built a system converter using keypad, LCD, and MCU for number system conversions.</p>
-				<a href="projects/number_converter.html" class="show-more-btn">Show More →</a>
-            </div>
-        </div>
-
-        <!-- Fire System -->
-        <div class="project">
-            <img src="assets/fire_system.jpg" alt="Fire System">
-            <div class="project-description">
-                <h3>Fire System</h3>
-                <p>Created a fire detection system using temperature and smoke sensors, motor-controlled water valves, EEPROM for password storage, and MCU logic.</p>
-				<a href="projects/fire_system.html" class="show-more-btn">Show More →</a>
-			</div>
-        </div>
-
-        
     </section>
 
     <section id="contact">
@@ -478,5 +236,43 @@
             <a href="https://github.com/AbdAlmotalb" target="_blank">GitHub</a>
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Swiper
+            const swiper = new Swiper('.other-projects-slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.5,
+                        centeredSlides: true,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        centeredSlides: false,
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
