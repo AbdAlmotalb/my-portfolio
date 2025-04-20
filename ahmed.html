@@ -19,13 +19,25 @@
         <p>Data analyst</p>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#other-projects">Other Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+   <!-- Hamburger Button -->
+	<div class="hamburger" id="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<!-- Mobile Nav -->
+	<div class="mobile-nav" id="mobileNav">
+		<a href="#about">About</a>
+		<a href="#skills">Skills</a>
+		<a href="#projects">Projects</a>
+		<a href="#other-projects">Other Projects</a>
+		<a href="#contact">Contact</a>
+	</div>
+
+	<!-- Overlay -->
+	<div class="overlay" id="overlay"></div>
+
 
     <section id="about">
         <h2>About Me</h2>
@@ -274,5 +286,21 @@
             });
         });
     </script>
+	<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        overlay.classList.remove('show');
+    });
+</script>
+
 </body>
 </html>
