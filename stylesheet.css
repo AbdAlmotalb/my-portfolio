@@ -357,3 +357,68 @@ section {
 .other-projects-slider .project-description {
     padding: 15px; /* Slightly less padding for carousel */
 }
+
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .skills-container {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-description {
+        padding: 15px 0;
+    }
+
+    .show-more-btn {
+        align-self: center;
+    }
+
+    #contact form {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .other-projects-slider .project img {
+        height: auto;
+    }
+
+    .other-projects-slider .project-description {
+        padding: 12px;
+    }
+}
